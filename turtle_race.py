@@ -10,6 +10,9 @@ Race = False
 s = Screen()
 s.setup(width=500, height=400)
 bet = s.textinput(title="Make your Bet", prompt="Which turtle will win? Enter a color: ")
+if bet not in colors:
+    print("Invalid color choice! Please run the program again and choose a valid color.")
+    s.bye()  
 X = -230
 Y = -100
 colors = ["red", "orange", "yellow", "blue", "violet"]
